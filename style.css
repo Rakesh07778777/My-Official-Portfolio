@@ -259,59 +259,32 @@
         }
 
         /* Enhanced Scroll Down Indicator */
+
         .scroll-down {
             position: absolute;
             bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            color: var(--accent);
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .scroll-down-text {
             writing-mode: vertical-rl;
-            transform: rotate(180deg);
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
-        .scroll-down-arrow {
-            width: 2px;
-            height: 60px;
-            background: var(--border);
-            position: relative;
-            overflow: hidden;
-            border-radius: 1px;
-        }
-
-        .scroll-down-arrow::after {
+        .scroll-down::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: var(--accent-color);
-            border-radius: 1px;
-            animation: scrollArrow 2s infinite;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, rgb(251, 54, 44));
+            animation: scrollLine 2s infinite;
         }
 
-        @keyframes scrollArrow {
-            0% {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(60px);
-                opacity: 0;
-            }
+        @keyframes scrollLine {
+            0%, 100% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(20px); }
         }
 
         /* Floating Elements */
@@ -332,7 +305,7 @@
         }
 
         .section-label {
-            font-size: 11px;
+            font-size: 14px;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: var(--accent);
