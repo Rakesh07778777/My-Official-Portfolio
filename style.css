@@ -207,7 +207,6 @@
         }
 
         .menu-links a:hover {
-            transform: scale(1.05);
             letter-spacing: 3px;
         }
 
