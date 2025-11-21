@@ -181,7 +181,7 @@
 
         .menu-links a {
             font-size: 32px;
-            font-weight: 700;
+            font-weight: 400;
             color: var(--primary);
             text-decoration: none;
             letter-spacing: -3px;
